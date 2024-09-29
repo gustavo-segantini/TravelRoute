@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using TravelRouteLib.Models;
 
-namespace TravelRouteLib.Service
+namespace TravelRouteLib.Services
 {
     public interface IDijkstra
     {

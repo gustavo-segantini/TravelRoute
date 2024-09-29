@@ -1,12 +1,14 @@
 ﻿
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TravelRouteLib.Configuration;
-using TravelRouteLib.Service;
+using TravelRouteLib.Services;
 
 namespace TravelRouteConsole;
 
+[ExcludeFromCodeCoverage]
 internal class Program
 {
     private static async Task Main()

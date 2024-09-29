@@ -1,8 +1,8 @@
 ﻿namespace TravelRouteLib.Models
 {
-    public class BestRoute(string route, int cost)
+    public class BestRoute
     {
-        public string Route { get; set; } = route;
-        public int Cost { get; set; } = cost;
+        public string Route { get; set; }
+        public int Cost { get; set; }
     }
 }

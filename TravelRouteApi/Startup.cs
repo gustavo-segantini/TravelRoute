@@ -1,14 +1,16 @@
-﻿using MediatR;
+﻿using System.Diagnostics.CodeAnalysis;
+using MediatR;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using TravelRouteLib.Configuration;
-using TravelRouteLib.Service;
+using TravelRouteLib.Services;
 
 namespace TravelRouteApi;
 
+[ExcludeFromCodeCoverage]
 public class Startup(IConfiguration configuration)
 {
     public IConfiguration Configuration { get; } = configuration;

@@ -3,9 +3,9 @@ using Microsoft.Extensions.Options;
 using TravelRouteLib.Configuration;
 using TravelRouteLib.Models;
 
-namespace TravelRouteLib.Service;
+namespace TravelRouteLib.Services;
 
-public class Dijkstra(IOptions<PathCsvFile> config) : IDijkstra
+public class Dijkstra(IOptions<PathCsvFile> config) : IDijkstra, IDisposable
 {
     public static readonly Dictionary<string, List<(string, int)>> Graph = new();
 
@@ -61,7 +61,11 @@ public class Dijkstra(IOptions<PathCsvFile> config) : IDijkstra
             {
                 return await Task.Run(() =>
                 {
-                    var bestRoute = new BestRoute(path, currentCost);
+                    var bestRoute = new BestRoute
+                    {
+                        Route = path,
+                        Cost = currentCost
+                    };
 
                     return bestRoute;
                 });
@@ -80,9 +84,18 @@ public class Dijkstra(IOptions<PathCsvFile> config) : IDijkstra
 
         return await Task.Run(() =>
         {
-            var bestRoute = new BestRoute("No route found", int.MaxValue);
+            var bestRoute = new BestRoute
+            {
+                Route = "No route found",
+                Cost = int.MaxValue
+            };
 
             return bestRoute;
         });
+    }
+
+    public void Dispose()
+    {
+        Graph.Clear();
     }
 }

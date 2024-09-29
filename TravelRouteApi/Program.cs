@@ -1,23 +1,32 @@
+using System.Diagnostics.CodeAnalysis;
 using Serilog;
-using TravelRouteApi;
 
-var builder = WebApplication.CreateBuilder(args);
+namespace TravelRouteApi;
 
-// Configure Serilog
-Log.Logger = new LoggerConfiguration()
-    .WriteTo.Console()
-    .CreateLogger();
+[ExcludeFromCodeCoverage]
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
 
-builder.Host.UseSerilog();
+        // Configure Serilog
+        Log.Logger = new LoggerConfiguration()
+            .WriteTo.Console()
+            .CreateLogger();
 
-// Add services to the container.
-var startup = new Startup(builder.Configuration);
-startup.ConfigureServices(builder.Services);
+        builder.Host.UseSerilog();
 
-var app = builder.Build();
+        // Add services to the container.
+        var startup = new Startup(builder.Configuration);
+        startup.ConfigureServices(builder.Services);
 
-// Configure the HTTP request pipeline.
-startup.Configure(app, app.Environment);
+        var app = builder.Build();
+
+        // Configure the HTTP request pipeline.
+        startup.Configure(app, app.Environment);
 
 
-app.Run();
+        app.Run();
+    }
+}

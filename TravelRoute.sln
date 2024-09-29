@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelRouteConsole", "TravelRouteConsole\TravelRouteConsole.csproj", "{0EC2B832-A02B-4757-8F7E-756854B0C758}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelRouteConsole", "TravelRouteConsole\TravelRouteConsole.csproj", "{0EC2B832-A02B-4757-8F7E-756854B0C758}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelRouteApi", "TravelRouteApi\TravelRouteApi.csproj", "{F9E24CED-55AA-4D49-A009-0042133DF73A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelRouteApi", "TravelRouteApi\TravelRouteApi.csproj", "{F9E24CED-55AA-4D49-A009-0042133DF73A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelRouteLib", "TravelRouteLib\TravelRouteLib.csproj", "{69EA0241-2071-4E3E-BA40-8D6A056BF275}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelRouteLib", "TravelRouteLib\TravelRouteLib.csproj", "{69EA0241-2071-4E3E-BA40-8D6A056BF275}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelRouteTest", "TravelRouteTest\TravelRouteTest.csproj", "{27D0420F-8E2E-4124-97B7-6D954368EA8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{69EA0241-2071-4E3E-BA40-8D6A056BF275}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69EA0241-2071-4E3E-BA40-8D6A056BF275}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69EA0241-2071-4E3E-BA40-8D6A056BF275}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27D0420F-8E2E-4124-97B7-6D954368EA8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27D0420F-8E2E-4124-97B7-6D954368EA8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27D0420F-8E2E-4124-97B7-6D954368EA8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27D0420F-8E2E-4124-97B7-6D954368EA8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

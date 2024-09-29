@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using TravelRouteApi.Commands;
-using TravelRouteLib.Service;
+using TravelRouteLib.Services;
 
 namespace TravelRouteApi.Handlers
 {
