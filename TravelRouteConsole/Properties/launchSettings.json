@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "TravelRouteConsole": {
+      "commandName": "Project",
+      "commandLineArgs": "input-routes.csv"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "commandLineArgs": "input-routes.csv"
+    }
+  }
+}
