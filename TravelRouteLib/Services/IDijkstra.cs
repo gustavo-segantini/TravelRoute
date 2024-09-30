@@ -10,5 +10,6 @@ namespace TravelRouteLib.Services
         Task<Unit> AddRoute(RouteTrip routeTrip);
 
         Task<BestRoute> FindBestRoute(string from, string to);
+        void Dispose();
     }
 }

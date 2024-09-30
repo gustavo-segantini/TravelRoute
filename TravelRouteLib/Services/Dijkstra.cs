@@ -97,5 +97,6 @@ public class Dijkstra(IOptions<PathCsvFile> config) : IDijkstra, IDisposable
     public void Dispose()
     {
         Graph.Clear();
+        GC.SuppressFinalize(this);
     }
 }
