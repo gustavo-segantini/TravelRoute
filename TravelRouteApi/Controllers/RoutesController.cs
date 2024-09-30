@@ -7,9 +7,10 @@ namespace TravelRouteApi.Controllers
 {
 
     [ApiController]
+    [Route("/[controller]")]
     public class RoutesController(IMediator mediator) : Controller
     {
-        [HttpPost("register")]
+        [HttpPost()]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorEventArgs), StatusCodes.Status400BadRequest)]
         [Produces("application/json")]
@@ -22,7 +23,7 @@ namespace TravelRouteApi.Controllers
             return Ok();
         }
 
-        [HttpGet("best-route")]
+        [HttpGet("best")]
         [ProducesResponseType(typeof(BestRoute), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Produces("application/json")]
